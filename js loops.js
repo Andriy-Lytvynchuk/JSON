@@ -1,6 +1,5 @@
-/*   This is source JSON object just so I can format it clearly;
-var info = {
-
+/*   This is the source JSON object:
+{
   "1":{"employeeid":"1",
   "employeefname":"Gary",
   "employeelname":"Bittle",
@@ -28,9 +27,7 @@ document.getElementById("container").innerHTML=info[1].employeebio;
 
 //Variables:
  var xhttp; var data;
-//  var name;  var bio; var photo; var output; var crown;
  var container =  document.getElementById("container");
-//  var role1; var role2; var roleColor1; var roleColor2;
  var role; var color;
 
 
@@ -92,7 +89,7 @@ xhttp.onreadystatechange = function() {
       p.appendChild(pNode);
       childDiv.appendChild(p);
       
-      // Print Roles and Colors using nested loop iterating through "roles" array inside every object of top level: 
+      // Print Roles and Colors using nested loop iterating through "roles" array inside every object of the top level: 
       for ( ii = 0; ii < data[i].roles.length; ii++) {
         role = data[i].roles[ii].rolename;
         var roleDiv = document.createElement("div");
